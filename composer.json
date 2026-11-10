@@ -1,0 +1,26 @@
+{
+    "name": "elemer/windows-2fa-agent",
+    "description": "HTTP agent for temporary Active Directory workstation permissions",
+    "type": "project",
+    "require": {
+        "ext-hash": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "php": ">=8.2",
+        "react/event-loop": "^1.5",
+        "react/http": "^1.11",
+        "react/promise": "^3.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "TwoFactorAgent\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "@php tests/run.php"
+    },
+    "config": {
+        "allow-plugins": false,
+        "sort-packages": true
+    }
+}

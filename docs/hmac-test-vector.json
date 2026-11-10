@@ -1,0 +1,15 @@
+{
+  "warning": "Public test key; never use in production. Fixed historical timestamp for offline verification only.",
+  "key_hex": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "agent_id": "dc1",
+  "method": "POST",
+  "path": "/v1/grants",
+  "timestamp": "1793890800",
+  "nonce": "00112233445566778899aabbccddeeff",
+  "body": "{\"request_id\":\"4c5b8de6-b4b9-4e10-a2c2-86b8f4f24c30\",\"sequence\":1001,\"login\":\"ivanov-dd\",\"computer\":\"IVANOV-2121\",\"expires_at\":\"2026-11-05T15:05:00Z\"}",
+  "canonical": "POST\n/v1/grants\ndc1\n1793890800\n00112233445566778899aabbccddeeff\na97a6c2db38295da4a40f0c1cec0879af17f2b40df06532afe543108435cfd24",
+  "request_signature": "74683acb0483acb0facc0e720b43f599d69695d314834030f6855bcebb5decf3",
+  "response_status": 200,
+  "response_body": "{\"ok\":true,\"result\":{\"status\":\"granted\"}}",
+  "response_signature": "3b862004de271f1fdba3e8e5d030a57be77e7e8540f2a7092355d9b406a5ad07"
+}

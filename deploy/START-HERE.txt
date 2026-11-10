@@ -1,0 +1,29 @@
+WINDOWS DOMAIN 2FA AGENT — SOURCE AND OFFICIAL RUNTIME
+
+agent/          PHP/PowerShell source, locked Composer libraries, examples and tests.
+php/            Official PHP 8.4.27-1 NTS VS17 x64; OpenSSL enabled in php.ini.
+prerequisites/  Official Microsoft Visual C++ Runtime installer.
+docs/           Installation, API and validation instructions.
+sources/        Input provenance and per-file SHA-256 manifest.
+
+Start with docs/instruction.txt. Install on the actual domain controller using
+the included open PowerShell scripts. No custom executable is compiled.
+The default API port is HTTPS:8443. Configure each controller separately.
+
+Before running prerequisites/VC_redist.x64.exe, check its Windows Authenticode
+signature: Status must be Valid and the signer must be Microsoft Corporation.
+The packaging program verifies the pinned download hash; Linux packaging alone
+does not validate Windows Authenticode.
+
+Runtime config.json, HMAC secrets, TLS material, logs and databases are excluded.
+Create configuration from an example; the installer generates each agent's key.
+
+Agent deadlines are in memory. Windows-agent configuration controls duration:
+grantDurationSeconds: default 300, allowed 30–600;
+supportDurationSeconds: default 60, allowed 30–180.
+The agent closes expired access itself. HTTP revocation from the portal is only
+requested by the user's explicit cabinet cancel action. Changes on one DC do
+not make the independent agents or AD replication an atomic cluster.
+
+Open build instructions: docs/BUILD.md. Archives and downloaded runtimes do not
+belong in Git. Build and test on a separate machine, never over a running agent.

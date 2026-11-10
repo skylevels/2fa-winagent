@@ -1,0 +1,28 @@
+{
+    "agentId": "dosifey",
+    "bindAddress": "0.0.0.0",
+    "port": 8443,
+    "allowedIPs": [
+        "192.0.2.10"
+    ],
+    "apiSecretHex": "GENERATED_BY_INSTALLER",
+    "domainController": "dosifey.elemer.org",
+    "logDirectory": "C:\\2fa\\logs",
+    "stub": "2FA-BLOCK",
+    "bypassGroup": "2fabypass",
+    "powershellPath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "requestSkewSeconds": 30,
+    "grantDurationSeconds": 300,
+    "supportDurationSeconds": 60,
+    "processTimeoutSeconds": 30,
+    "requestReceiveTimeoutSeconds": 5,
+    "queueWaitTimeoutSeconds": 2,
+    "maxConnections": 100,
+    "adminTimeoutSeconds": 3600,
+    "startEnabled": true,
+    "maxPendingRequests": 100,
+    "maxActiveGrants": 10000,
+    "maxRememberedRequests": 20000,
+    "tlsCertificateFile": "C:\\2fa\\agent\\tls\\agent.crt.pem",
+    "tlsPrivateKeyFile": "C:\\2fa\\agent\\tls\\agent.key.pem"
+}
